@@ -154,9 +154,8 @@
 
 <script>
     // === CONFIGURACIÓN ===
-    // IMPORTANTE: Reemplaza esta URL con la de tu aplicación web de Apps Script
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycb.../exec';  // 👈 Cámbiala
-    
+    const SCRIPT_URL = window.APP_CONFIG ? window.APP_CONFIG.SCRIPT_URL : '';
+    if (!SCRIPT_URL) alert('Error de configuración: falta la URL del script');    
     // Variables de estado
     let promotorActual = null;
     
